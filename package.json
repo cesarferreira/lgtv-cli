@@ -1,38 +1,38 @@
 {
-  "name": "tv-freenzy",
-  "version": "0.0.0",
-  "description": "control my tv",
-  "author": {
-    "name": "Cesar Ferreira",
-    "email": "cesar.manuel.ferreira@gmail.com",
-    "url": "http://cesarferreira.com"
-  },
-  "scripts": {
-    "lint": "eslint src/**/*",
-    "start": "node index.js",
-    "test": "xo"
-  },
-  "main": "index.js",
-  "keywords": [],
-  "dependencies": {
-    "chalk": "^2.0.1",
-    "lgtv2": "^1.3.0",
-    "meow": "^3.7.0",
-    "node-time-log": "^1.0.3",
-    "omelette": "^0.4.4",
-    "update-notifier": "^2.2.0"
-  },
-  "devDependencies": {
-    "eslint": "^4.2.0",
-    "xo": "^0.18.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cesarferreira/tv-freenzy.git"
-  },
-  "bugs": {
-    "url": "https://github.com/cesarferreira/tv-freenzy/issues"
-  },
-  "homepage": "https://github.com/cesarferreira/tv-freenzy#readme",
-  "license": "MIT"
+    "name": "lgtv-cli",
+    "version": "0.0.0",
+    "description": "control my tv",
+    "author": {
+        "name": "Cesar Ferreira",
+        "email": "cesar.manuel.ferreira@gmail.com",
+        "url": "http://cesarferreira.com"
+    },
+    "scripts": {
+        "lint": "eslint src/**/*",
+        "start": "node index.js",
+        "test": "xo"
+    },
+    "main": "index.js",
+    "keywords": [],
+    "dependencies": {
+        "chalk": "^2.0.1",
+        "lgtv2": "^1.3.0",
+        "meow": "^3.7.0",
+        "node-time-log": "^1.0.3",
+        "omelette": "^0.4.4",
+        "update-notifier": "^2.2.0"
+    },
+    "devDependencies": {
+        "eslint": "^4.2.0",
+        "xo": "^0.18.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cesarferreira/lgtv-cli.git"
+    },
+    "bugs": {
+        "url": "https://github.com/cesarferreira/lgtv-cli/issues"
+    },
+    "homepage": "https://github.com/cesarferreira/lgtv-cli#readme",
+    "license": "MIT"
 }

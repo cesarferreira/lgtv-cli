@@ -18,8 +18,10 @@ yarn add lgtv-cli
 ## Usage
 
 ```bash
-lgtv-cli --launch netflix   # opens the netflix app
-lgtv-cli --volume 15        # sets the volume to level 15
+lgtv-cli --launch=netflix   # opens the netflix app
+lgtv-cli --volume=15        # sets the volume to level 15
+lgtv-cli --volume=up        # sets the volume up
+lgtv-cli --volume=down      # sets the volume down
 ```
 
 ## Created by

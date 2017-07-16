@@ -13,9 +13,12 @@ updateNotifier({ pkg }).notify();
 const COMMAND_PAUSE = 'ssap://media.controls/pause';
 const COMMAND_PLAY = 'ssap://media.controls/play';
 const COMMAND_SET_VOLUME = 'ssap://audio/setVolume';
+const COMMAND_SET_VOLUME_UP = 'ssap://audio/volumeUp';
+const COMMAND_SET_VOLUME_DOWN = 'ssap://audio/volumeDown';
 const COMMAND_TOAST = 'ssap://system.notifications/createToast';
 const COMMAND_TURN_OFF = 'ssap://system/turnOff';
 const COMMAND_LAUNCH = 'ssap://system.launcher/launch';
+const COMMAND_CHANGE_INPUT = 'ssap://tv/switchInput';
 
 const cli = meow(`
 	Usage
@@ -47,6 +50,7 @@ const lgtv = require("lgtv2")({
 });
 
 function performRequest(command, params) {
+    log(command)
     lgtv.request(command, params || {}, (err, res) => {
         if (err) {
             log(err);
@@ -58,12 +62,18 @@ function performRequest(command, params) {
 
         lgtv.disconnect();
         process.exit();
-    });
+    }, _);
 }
 
 function handleParams(key, value) {
     if (key.includes('volume')) {
-        performRequest(COMMAND_SET_VOLUME, { volume: value });
+        if (value === 'up') {
+            performRequest(COMMAND_SET_VOLUME_UP);
+        } else if (value === 'down') {
+            performRequest(COMMAND_SET_VOLUME_DOWN);
+        } else {
+            performRequest(COMMAND_SET_VOLUME, { volume: value });
+        }
     }
 
     if (key.includes('launch')) {
@@ -80,6 +90,10 @@ function handleParams(key, value) {
 
     if (key.includes('pause')) {
         performRequest(COMMAND_PAUSE);
+    }
+
+    if (key.includes('input')) {
+        performRequest(COMMAND_CHANGE_INPUT);
     }
 }
 
