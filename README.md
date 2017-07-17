@@ -22,6 +22,8 @@ lgtv-cli --launch=netflix   # opens the netflix app
 lgtv-cli --volume=15        # sets the volume to level 15
 lgtv-cli --volume=up        # sets the volume up
 lgtv-cli --volume=down      # sets the volume down
+lgtv-cli --off              # turns off the TV
+lgtv-cli --input=HDMI1      # changes the source
 ```
 
 ## Created by
