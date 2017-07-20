@@ -12,7 +12,7 @@
 ## Install
 
 ```sh
-yarn add lgtv-cli
+npm install --global lgtv-cli
 ```
 
 ## Usage

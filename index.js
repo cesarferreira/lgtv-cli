@@ -8,7 +8,7 @@ const meow = require('meow');
 // package if a new version is released
 updateNotifier({ pkg }).notify();
 
-// main code //
+// Main code //
 
 const COMMAND_PAUSE = 'ssap://media.controls/pause';
 const COMMAND_PLAY = 'ssap://media.controls/play';

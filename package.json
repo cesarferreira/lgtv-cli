@@ -10,7 +10,10 @@
     "scripts": {
         "lint": "eslint src/**/*",
         "start": "node index.js",
-        "test": "xo"
+        "test": ""
+    },
+    "bin": {
+    	"lgtv-cli": "./index.js"
     },
     "main": "index.js",
     "keywords": [],
